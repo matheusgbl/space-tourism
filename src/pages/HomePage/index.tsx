@@ -1,13 +1,12 @@
-import homeBg from '../../assets/home/background-home-desktop.jpg';
-import { Container, Content } from './styles';
+import Header from '../../components/Header';
+import Hero from '../../components/Hero';
+import { Container } from './styles';
 
-function Home() {
+export default function Home() {
   return (
     <Container>
-      <img src={homeBg} alt="background space" />
-      <Content>dapadale</Content>
+      <Header />
+      <Hero />
     </Container>
   );
 }
-
-export default Home;

@@ -11,6 +11,10 @@ export default createGlobalStyle`
   body {
     color: #fff;
     -webkit-font-smoothing: antialiased;
+    background-image: url('./src/assets/home/background-home-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
   }
 
   html, body {
