@@ -1,25 +1,31 @@
+import { Link, useLocation } from 'react-router-dom';
+
 import logo from '../../assets/shared/logo.svg';
 import { Container, Content, Navigation } from './styles';
 
 export default function Header() {
+  const location = useLocation();
+
   return (
     <Container>
       <Content>
         <img src={logo} alt="logo" />
         <div className="line"></div>
         <Navigation>
-          <a href="/" className="active">
+          <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
             <strong>00</strong> HOME
-          </a>
-          <a href="/destination">
+          </Link>
+          <Link
+            to="/destination"
+            className={location.pathname.includes('destination') ? 'active' : ''}>
             <strong>01</strong> DESTINATION
-          </a>
-          <a href="/crew">
+          </Link>
+          <Link to="/crew">
             <strong>02</strong> CREW
-          </a>
-          <a href="/tech">
+          </Link>
+          <Link to="/tech">
             <strong>03</strong> TECHNOLOGY
-          </a>
+          </Link>
         </Navigation>
       </Content>
     </Container>
