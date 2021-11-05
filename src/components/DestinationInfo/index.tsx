@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import data from '../../data.json';
 import {
   Container,
   DestinationData,
@@ -26,39 +27,22 @@ export default function DestinationInfo({
   travel,
   onSelect,
 }: DestinationProps) {
+  const destination = data.destinations;
+
   return (
     <Container>
       <DestinationData>
         <DestinationList>
-          <button
-            type="button"
-            onClick={() => onSelect('Moon')}
-            key={name}
-            className={selected.includes('Moon') ? 'selected' : ''}>
-            Moon
-          </button>
-          <button
-            type="button"
-            onClick={() => onSelect('Mars')}
-            key={name}
-            className={selected.includes('Mars') ? 'selected' : ''}>
-            Mars
-          </button>
-          <button
-            type="button"
-            onClick={() => onSelect('Europa')}
-            key={name}
-            className={selected.includes('Europa') ? 'selected' : ''}>
-            Europa
-          </button>
-          <button
-            type="button"
-            onClick={() => onSelect('Titan')}
-            key={name}
-            value={name}
-            className={selected.includes('Titan') ? 'selected' : ''}>
-            Titan
-          </button>
+          {destination.map(({ name }) => (
+            <button
+              type="button"
+              onClick={() => onSelect(name)}
+              key={name}
+              value={name}
+              className={selected.includes(name) ? 'selected' : ''}>
+              {name}
+            </button>
+          ))}
         </DestinationList>
         <DestinationDetails>
           <h1>{name}</h1>

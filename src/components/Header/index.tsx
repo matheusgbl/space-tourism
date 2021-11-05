@@ -20,10 +20,10 @@ export default function Header() {
             className={location.pathname.includes('destination') ? 'active' : ''}>
             <strong>01</strong> DESTINATION
           </Link>
-          <Link to="/crew">
+          <Link to="/crew" className={location.pathname.includes('crew') ? 'active' : ''}>
             <strong>02</strong> CREW
           </Link>
-          <Link to="/tech">
+          <Link to="/tech" className={location.pathname.includes('tech') ? 'active' : ''}>
             <strong>03</strong> TECHNOLOGY
           </Link>
         </Navigation>
