@@ -5,6 +5,15 @@ export const Container = styled.section`
     width: 450px;
     margin: 100px 60px;
   }
+
+  @media (max-width: 768px) {
+    img {
+      width: 300px;
+      margin: 50px 30px;
+      display: flex;
+      margin: 30px auto;
+    }
+  }
 `;
 
 export const DestinationData = styled.aside`
@@ -12,6 +21,15 @@ export const DestinationData = styled.aside`
   padding: 30px;
   left: 60%;
   height: 100%;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    padding: 30px;
+    left: 20%;
+    height: 100%;
+    top: 420px;
+    z-index: 9999;
+  }
 `;
 
 export const DestinationDetails = styled.div`
@@ -38,6 +56,27 @@ export const DestinationDetails = styled.div`
     font-weight: 400;
     text-transform: uppercase;
     margin: 50px 0;
+  }
+
+  @media (max-width: 768px) {
+    width: 400px;
+
+    .description {
+      font-size: 16px;
+      text-align: center;
+      max-width: 450px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 80px;
+      margin: 20px 0;
+    }
+
+    .separation-line {
+      width: 420px;
+      margin: 20px 0;
+    }
   }
 `;
 
@@ -66,6 +105,21 @@ export const DistanceAndTravel = styled.div`
       font-size: 30px;
     }
   }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    justify-content: center;
+    .distance,
+    .travel {
+      p:first-child {
+        font-size: 14px;
+      }
+
+      p:nth-child(2) {
+        font-size: 28px;
+      }
+    }
+  }
 `;
 
 export const DestinationList = styled.div`
@@ -90,6 +144,12 @@ export const DestinationList = styled.div`
       color: #ffffff;
       border-bottom: 3px solid #ffffff;
       padding: 10px 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    button {
+      font-size: 16px;
     }
   }
 `;
