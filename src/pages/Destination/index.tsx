@@ -1,5 +1,6 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useLayoutEffect, useState } from 'react';
 
+import destinationIntro, { destinationSelect } from '../../animations/destination';
 import DestinationInfo from '../../components/DestinationInfo';
 import Header from '../../components/Header';
 import data from '../../data.json';
@@ -7,6 +8,7 @@ import { Container, Content, PickDestination } from './styles';
 
 export default function Destination() {
   const [selectedPlanet, setSelectedPlanet] = useState('Moon');
+  const [isSelected, setIsSelected] = useState(false);
 
   const destination = data.destinations.filter(
     (destination) => destination.name === selectedPlanet,
@@ -14,7 +16,19 @@ export default function Destination() {
 
   const handleChange = useCallback((value: string) => {
     setSelectedPlanet(value);
+    setIsSelected(true);
   }, []);
+
+  useLayoutEffect(() => {
+    destinationIntro();
+  }, [destinationIntro]);
+
+  useLayoutEffect(() => {
+    if (isSelected === true) {
+      destinationSelect();
+      setIsSelected(false);
+    }
+  }, [isSelected]);
 
   return (
     <Container>

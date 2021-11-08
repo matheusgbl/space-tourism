@@ -4,8 +4,8 @@ import { Container, Content } from './styles';
 
 export default function Hero() {
   return (
-    <Container>
-      <Content>
+    <Container className="hero_container">
+      <Content className="hero_text">
         <h2>SO, YOU WANT TO TRAVEL TO</h2>
         <h1>SPACE</h1>
         <p>

@@ -37,8 +37,8 @@ export const Content = styled.div`
     border-radius: 50%;
     font-size: 32px;
     font-family: 'Bellefair', sans-serif;
-    top: 520px;
-    right: 300px;
+    top: 100px;
+    right: 100px;
     transition: all 0.5s ease;
     background-color: #ffffff;
     text-decoration: none;

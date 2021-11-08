@@ -28,11 +28,10 @@ export default function DestinationInfo({
   onSelect,
 }: DestinationProps) {
   const destination = data.destinations;
-
   return (
     <Container>
       <DestinationData>
-        <DestinationList>
+        <DestinationList className="destination_list">
           {destination.map(({ name }) => (
             <button
               type="button"
@@ -44,11 +43,11 @@ export default function DestinationInfo({
             </button>
           ))}
         </DestinationList>
-        <DestinationDetails>
+        <DestinationDetails className="destination_text">
           <h1>{name}</h1>
           <p className="description">{description}</p>
           <div className="separation-line"></div>
-          <DistanceAndTravel>
+          <DistanceAndTravel className="destination_data">
             <div className="distance">
               <p>AVG. DISTANCE</p>
               <p>{distance}</p>
@@ -60,7 +59,7 @@ export default function DestinationInfo({
           </DistanceAndTravel>
         </DestinationDetails>
       </DestinationData>
-      <img src={image} alt="planet" />
+      <img src={image} alt="planet" className="destination_planet" />
     </Container>
   );
 }
