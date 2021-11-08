@@ -3,7 +3,6 @@ import gsap from 'gsap';
 export default function heroIntro() {
   gsap
     .timeline()
-    .from('.hero_container', { duration: 1, opacity: 0 })
     .from('.hero_text', { opacity: 0, scale: 0, ease: 'power2.inOut' })
     .from('.hero_text h2', {
       y: 100,

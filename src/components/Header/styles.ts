@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.header`
   width: 100%;
 `;
+
 export const Content = styled.section`
   display: flex;
   padding-top: 60px;
@@ -10,7 +11,7 @@ export const Content = styled.section`
   justify-content: space-between;
 
   .line {
-    width: 800px;
+    width: 42vw;
     height: 0.01rem;
     background: #fff;
     opacity: 0.5;
@@ -23,6 +24,20 @@ export const Content = styled.section`
     width: 50px;
     height: 50px;
     margin: 0 75px;
+  }
+
+  @media (max-width: 1800px) {
+    .line {
+      width: 26.5vw;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 0;
+
+    .line {
+      display: none;
+    }
   }
 `;
 
@@ -51,6 +66,31 @@ export const Navigation = styled.nav`
 
     strong {
       margin-right: 10px;
+    }
+  }
+
+  @media (max-width: 1800px) {
+    padding: 50px 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 60px;
+
+    a {
+      margin-right: 1rem;
+      font-size: 14px;
+
+      &.active {
+        padding: 39px 0;
+      }
+
+      &:hover {
+        padding: 39px 0;
+      }
+
+      strong {
+        display: none;
+      }
     }
   }
 `;
