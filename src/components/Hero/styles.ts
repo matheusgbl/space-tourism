@@ -40,6 +40,9 @@ export const Content = styled.div`
     top: 520px;
     right: 300px;
     transition: all 0.5s ease;
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #0b0d17;
 
     &:hover {
       color: #ffffff;

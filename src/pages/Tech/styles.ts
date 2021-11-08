@@ -1,17 +1,18 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-  background-image: url('./src/assets/crew/background-crew-desktop.jpg');
+  background-image: url('./src/assets/technology/background-technology-desktop.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
 `;
 
 export const Content = styled.div`
-  padding: 100px 220px;
+  padding-top: 100px;
+  padding-left: 220px;
 `;
 
-export const CrewMeeting = styled.section`
+export const SpaceLaunch = styled.div`
   display: flex;
   align-items: center;
   font-family: 'Barlow';
@@ -24,6 +25,6 @@ export const CrewMeeting = styled.section`
   }
 
   p {
-    letter-spacing: 4px;
+    letter-spacing: 2px;
   }
 `;

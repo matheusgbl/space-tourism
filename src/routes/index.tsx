@@ -4,6 +4,7 @@ import { Switch } from 'react-router-dom';
 import Crew from '../pages/Crew';
 import Destination from '../pages/Destination';
 import HomePage from '../pages/HomePage';
+import Technology from '../pages/Tech';
 import { Route } from './route';
 
 export const Routes: React.FC = () => (
@@ -11,5 +12,6 @@ export const Routes: React.FC = () => (
     <Route exact path="/" component={HomePage} />
     <Route exact path="/destination" component={Destination} />
     <Route exact path="/crew" component={Crew} />
+    <Route exact path="/tech" component={Technology} />
   </Switch>
 );

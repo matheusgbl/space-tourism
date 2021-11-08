@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { Container, Content } from './styles';
 
 export default function Hero() {
@@ -11,9 +13,9 @@ export default function Hero() {
           outer space and not hover kind of on the edge of it. Well sit back, and relax
           because we’ll give you a truly out of this world experience!
         </p>
-        <button type="button" className="explore-button">
+        <Link to="/destination" className="explore-button">
           EXPLORE
-        </button>
+        </Link>
       </Content>
     </Container>
   );

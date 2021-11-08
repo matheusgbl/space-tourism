@@ -15,11 +15,12 @@ export const PickDestination = styled.div`
   display: flex;
   align-items: center;
   font-family: 'Barlow';
-  font-size: 28px;
+  font-size: 30px;
 
   h2 {
     margin-right: 20px;
     opacity: 0.3;
+    font-size: 30px;
   }
 
   p {
