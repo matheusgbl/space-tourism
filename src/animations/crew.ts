@@ -1,35 +1,34 @@
 import gsap from 'gsap';
 
-export default function destinationIntro() {
+export default function crewIntro() {
   gsap
     .timeline()
-    .from('.destination_planet', {
+    .from('.crew_img', {
       y: 100,
       opacity: 0,
       duration: 0.5,
       ease: 'ease-in',
     })
-    .from('.destination_list button', {
-      y: 100,
+    .from('.crew_text h2', {
+      x: -100,
       opacity: 0,
-      stagger: 0.1,
+      duration: 0.5,
+      ease: 'ease-in',
+    })
+    .from('.crew_text h1', {
+      x: -100,
+      opacity: 0,
       duration: 0.5,
       ease: 'back',
     })
-    .from('.destination_text h1', {
-      x: -100,
+    .from('.crew_text p', {
+      y: -100,
       opacity: 0,
       duration: 0.5,
       ease: 'ease-in',
     })
-    .from('.description', {
-      x: -100,
-      opacity: 0,
-      duration: 0.5,
-      ease: 'ease-in',
-    })
-    .from('.destination_data p', {
-      y: 100,
+    .from('.crew_container button', {
+      y: -100,
       opacity: 0,
       stagger: 0.1,
       duration: 0.5,
@@ -37,32 +36,31 @@ export default function destinationIntro() {
     });
 }
 
-export function destinationSelect() {
+export function crewSelect() {
   gsap
     .timeline()
-    .from('.destination_planet', {
+    .from('.crew_img', {
       y: 100,
       opacity: 0,
-      duration: 0.4,
+      duration: 0.5,
       ease: 'ease-in',
     })
-    .from('.destination_text h1', {
+    .from('.crew_text h2', {
       x: -100,
       opacity: 0,
-      duration: 0.3,
+      duration: 0.5,
       ease: 'ease-in',
     })
-    .from('.description', {
+    .from('.crew_text h1', {
       x: -100,
       opacity: 0,
-      duration: 0.3,
-      ease: 'ease-in',
+      duration: 0.5,
+      ease: 'back',
     })
-    .from('.destination_data', {
-      y: 100,
+    .from('.crew_text p', {
+      y: -100,
       opacity: 0,
-      stagger: 0.1,
-      duration: 0.3,
+      duration: 0.5,
       ease: 'ease-in',
     });
 }

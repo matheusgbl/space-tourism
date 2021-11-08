@@ -22,13 +22,13 @@ export default function CrewInfo({
   const crews = data.crew;
 
   return (
-    <Container>
-      <CrewInfos>
+    <Container className="crew_container">
+      <CrewInfos className="crew_text">
         <h2>{role}</h2>
         <h1>{name}</h1>
         <p>{bio}</p>
       </CrewInfos>
-      <CrewImage>
+      <CrewImage className="crew_img">
         <img src={image} alt="crew" />
       </CrewImage>
       <CrewSelection>
