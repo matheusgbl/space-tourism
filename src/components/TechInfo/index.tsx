@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import data from '../../data.json';
-import { Container, LaunchDescription } from './styles';
+import { Container, LaunchDescription, LaunchImage, LaunchSelection } from './styles';
 
 type TechProps = {
   name: string;
@@ -21,7 +21,7 @@ export default function TechInfo({
 
   return (
     <Container>
-      <div>
+      <LaunchSelection className="launch_selection">
         {tech.map((item, index) => (
           <button
             type="button"
@@ -32,15 +32,15 @@ export default function TechInfo({
             {index + 1}
           </button>
         ))}
-      </div>
-      <LaunchDescription>
+      </LaunchSelection>
+      <LaunchDescription className="launch_description">
         <h2>THE TERMINLOGY ...</h2>
         <h1>{name}</h1>
         <p>{description}</p>
       </LaunchDescription>
-      <div>
+      <LaunchImage className="launch_img">
         <img src={image} alt={name} />
-      </div>
+      </LaunchImage>
     </Container>
   );
 }

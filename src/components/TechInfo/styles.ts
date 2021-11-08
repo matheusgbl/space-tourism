@@ -3,7 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.section`
   display: flex;
   margin-top: 4rem;
+`;
 
+export const LaunchSelection = styled.div`
   button {
     border: 1px solid #ffffff;
     color: #ffffff;
@@ -25,11 +27,6 @@ export const Container = styled.section`
       background: #ffffff;
       color: #0b0d17;
     }
-  }
-
-  img {
-    display: flex;
-    margin-left: 400px;
   }
 `;
 
@@ -58,5 +55,12 @@ export const LaunchDescription = styled.div`
     font-size: 20px;
     line-height: 32px;
     max-width: 480px;
+  }
+`;
+
+export const LaunchImage = styled.div`
+  img {
+    display: flex;
+    margin-left: 400px;
   }
 `;

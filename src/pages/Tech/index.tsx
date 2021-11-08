@@ -1,5 +1,6 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useLayoutEffect, useState } from 'react';
 
+import techIntro, { techSelect } from '../../animations/tech';
 import Header from '../../components/Header';
 import TechInfo from '../../components/TechInfo';
 import data from '../../data.json';
@@ -7,6 +8,7 @@ import { Container, Content, SpaceLaunch } from './styles';
 
 export default function Technology() {
   const [selectedLaunch, setSelectedLaunch] = useState('Launch');
+  const [isSelected, setIsSelected] = useState(false);
 
   const techs = data.technology.filter((destination) =>
     destination.name.includes(selectedLaunch),
@@ -14,7 +16,19 @@ export default function Technology() {
 
   const handleChange = useCallback((value: string) => {
     setSelectedLaunch(value);
+    setIsSelected(true);
   }, []);
+
+  useLayoutEffect(() => {
+    techIntro();
+  }, [techIntro]);
+
+  useLayoutEffect(() => {
+    if (isSelected === true) {
+      techSelect();
+      setIsSelected(false);
+    }
+  }, [isSelected]);
 
   return (
     <Container>
