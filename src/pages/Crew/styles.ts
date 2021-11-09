@@ -5,10 +5,18 @@ export const Container = styled.main`
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+
+  @media (max-width: 768px) {
+    background-image: url('./src/assets/crew/background-crew-tablet.jpg');
+  }
 `;
 
 export const Content = styled.div`
   padding: 100px 220px;
+
+  @media (max-width: 768px) {
+    padding: 40px 50px;
+  }
 `;
 
 export const CrewMeeting = styled.section`
@@ -25,5 +33,13 @@ export const CrewMeeting = styled.section`
 
   p {
     letter-spacing: 4px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+
+    h2 {
+      font-size: 20px;
+    }
   }
 `;

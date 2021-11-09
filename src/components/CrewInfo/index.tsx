@@ -28,9 +28,6 @@ export default function CrewInfo({
         <h1>{name}</h1>
         <p>{bio}</p>
       </CrewInfos>
-      <CrewImage className="crew_img">
-        <img src={image} alt="crew" />
-      </CrewImage>
       <CrewSelection>
         {crews.map(({ name }) => (
           <button
@@ -42,6 +39,9 @@ export default function CrewInfo({
           />
         ))}
       </CrewSelection>
+      <CrewImage className="crew_img">
+        <img src={image} alt="crew" />
+      </CrewImage>
     </Container>
   );
 }

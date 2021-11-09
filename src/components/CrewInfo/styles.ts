@@ -7,6 +7,16 @@ export const CrewImage = styled.aside`
   left: 60%;
   top: 40%;
   height: 100%;
+
+  @media (max-width: 768px) {
+    max-height: 600px;
+    top: 58%;
+    left: 20%;
+
+    img {
+      width: 450px;
+    }
+  }
 `;
 
 export const CrewInfos = styled.div`
@@ -36,6 +46,31 @@ export const CrewInfos = styled.div`
     font-family: 'Barlow';
     font-size: 18px;
   }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 20px 0;
+    }
+
+    p {
+      width: 100%;
+      line-height: 28px;
+      padding: 0px 80px;
+      font-size: 16px;
+    }
+  }
 `;
 
 export const CrewSelection = styled.div`
@@ -56,6 +91,18 @@ export const CrewSelection = styled.div`
 
     &.selected {
       background-color: #ffffff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+
+    button {
+      padding: 7px;
+      margin-left: 20px;
     }
   }
 `;
