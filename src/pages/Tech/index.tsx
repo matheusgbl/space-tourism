@@ -42,6 +42,7 @@ export default function Technology() {
           <TechInfo
             description={tech.description}
             image={tech.images.portrait}
+            landscapeImg={tech.images.landscape}
             name={tech.name}
             onSelect={handleChange}
             selected={selectedLaunch}

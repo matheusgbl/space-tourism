@@ -5,11 +5,19 @@ export const Container = styled.main`
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+
+  @media (max-width: 768px) {
+    background-image: url('./src/assets/technology/background-technology-tablet.jpg');
+  }
 `;
 
 export const Content = styled.div`
   padding-top: 100px;
   padding-left: 220px;
+
+  @media (max-width: 768px) {
+    padding: 40px 0px;
+  }
 `;
 
 export const SpaceLaunch = styled.div`
@@ -26,5 +34,14 @@ export const SpaceLaunch = styled.div`
 
   p {
     letter-spacing: 2px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    padding-left: 20px;
+
+    h2 {
+      font-size: 20px;
+    }
   }
 `;

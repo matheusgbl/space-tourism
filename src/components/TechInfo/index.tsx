@@ -6,6 +6,7 @@ type TechProps = {
   name: string;
   description: string;
   image: string;
+  landscapeImg: string;
   selected: string;
   onSelect: (value: string) => void;
 };
@@ -15,12 +16,16 @@ export default function TechInfo({
   description,
   image,
   selected,
+  landscapeImg,
   onSelect,
 }: TechProps) {
   const tech = data.technology;
 
   return (
     <Container>
+      <LaunchImage className="launch_img_landscape">
+        <img src={landscapeImg} alt={name} className="launch_img_landscape" />
+      </LaunchImage>
       <LaunchSelection className="launch_selection">
         {tech.map((item, index) => (
           <button
@@ -39,7 +44,7 @@ export default function TechInfo({
         <p>{description}</p>
       </LaunchDescription>
       <LaunchImage className="launch_img">
-        <img src={image} alt={name} />
+        <img src={image} alt={name} className="launch_img_portrait" />
       </LaunchImage>
     </Container>
   );
