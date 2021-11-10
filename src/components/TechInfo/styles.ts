@@ -9,6 +9,12 @@ export const Container = styled.section`
     text-align: center;
     flex-direction: column;
   }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    margin-top: 2rem;
+    text-align: center;
+    flex-direction: column;
+  }
 `;
 
 export const LaunchSelection = styled.div`
@@ -48,6 +54,25 @@ export const LaunchSelection = styled.div`
       display: block;
       margin-top: 0px;
       margin-left: 30px;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    margin-top: 20px;
+
+    button {
+      font-size: 24px;
+      padding: 20px 30px;
+      display: block;
+      margin-top: 0px;
+      margin-left: 20px;
       justify-content: center;
       align-items: center;
       flex-direction: row;
@@ -101,6 +126,27 @@ export const LaunchDescription = styled.div`
       line-height: 28px;
     }
   }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    margin: 20px 0px;
+
+    h2 {
+      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin: 20px 0;
+    }
+
+    p {
+      max-width: 100%;
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 25px;
+      padding: 0 20px;
+    }
+  }
 `;
 
 export const LaunchImage = styled.div`
@@ -127,6 +173,23 @@ export const LaunchImage = styled.div`
       margin: 0;
       justify-content: center;
       width: 780px;
+    }
+  }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    .launch_img_portrait {
+      display: none;
+    }
+
+    .launch_img_landscape {
+      display: flex;
+      max-height: 300px;
+    }
+
+    img {
+      margin: 20px auto;
+      display: flex;
+      width: 100%;
     }
   }
 `;

@@ -9,6 +9,10 @@ export const Container = styled.main`
   @media (max-width: 768px) {
     background-image: url('./src/assets/crew/background-crew-tablet.jpg');
   }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    background-image: url('./src/assets/crew/background-crew-mobile.jpg');
+  }
 `;
 
 export const Content = styled.div`
@@ -16,6 +20,10 @@ export const Content = styled.div`
 
   @media (max-width: 768px) {
     padding: 40px 50px;
+  }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    padding: 40px 10px;
   }
 `;
 
@@ -40,6 +48,15 @@ export const CrewMeeting = styled.section`
 
     h2 {
       font-size: 20px;
+    }
+  }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    font-size: 16px;
+    justify-content: center;
+
+    h2 {
+      font-size: 16px;
     }
   }
 `;

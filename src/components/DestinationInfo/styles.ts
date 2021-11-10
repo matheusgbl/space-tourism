@@ -14,6 +14,14 @@ export const Container = styled.section`
       margin: 30px auto;
     }
   }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    img {
+      width: 220px;
+      display: flex;
+      margin: 40px auto;
+    }
+  }
 `;
 
 export const DestinationData = styled.aside`
@@ -23,12 +31,19 @@ export const DestinationData = styled.aside`
   height: 100%;
 
   @media (max-width: 768px) {
-    position: absolute;
     padding: 30px;
     left: 20%;
     height: 100%;
     top: 420px;
     z-index: 9999;
+  }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    padding: 50px 0;
+    left: 0;
+    height: 100%;
+    top: 300px;
+    z-index: 2;
   }
 `;
 
@@ -78,6 +93,29 @@ export const DestinationDetails = styled.div`
       margin: 20px 0;
     }
   }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    width: 100%;
+    padding: 0 20px;
+
+    .description {
+      font-size: 16px;
+      text-align: center;
+      max-width: 100%;
+      line-height: 25px;
+      font-weight: 300;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 60px;
+      margin: 10px 0;
+    }
+
+    .separation-line {
+      width: 100%;
+    }
+  }
 `;
 
 export const DistanceAndTravel = styled.div`
@@ -120,6 +158,30 @@ export const DistanceAndTravel = styled.div`
       }
     }
   }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    flex-direction: column;
+    justify-items: center;
+
+    .travel {
+      margin-left: 0px;
+    }
+
+    .distance {
+      margin-bottom: 20px;
+    }
+
+    .distance,
+    .travel {
+      p:first-child {
+        font-size: 16px;
+      }
+
+      p:nth-child(2) {
+        font-size: 24px;
+      }
+    }
+  }
 `;
 
 export const DestinationList = styled.div`
@@ -151,5 +213,9 @@ export const DestinationList = styled.div`
     button {
       font-size: 16px;
     }
+  }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    padding: 0px 20px;
   }
 `;

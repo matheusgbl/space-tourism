@@ -23,6 +23,9 @@ export default function CrewInfo({
 
   return (
     <Container className="crew_container">
+      <CrewImage className="crew_img_mobile">
+        <img src={image} alt="crew" className="crew_img_mobile1" />
+      </CrewImage>
       <CrewInfos className="crew_text">
         <h2>{role}</h2>
         <h1>{name}</h1>
@@ -40,7 +43,7 @@ export default function CrewInfo({
         ))}
       </CrewSelection>
       <CrewImage className="crew_img">
-        <img src={image} alt="crew" />
+        <img src={image} alt="crew" className="crew_img1" />
       </CrewImage>
     </Container>
   );

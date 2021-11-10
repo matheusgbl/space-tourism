@@ -9,6 +9,10 @@ export const Container = styled.main`
   @media (max-width: 768px) {
     background-image: url('./src/assets/destination/background-destination-tablet.jpg');
   }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    background-image: url('./src/assets/destination/background-destination-mobile.jpg');
+  }
 `;
 
 export const Content = styled.div`
@@ -16,6 +20,10 @@ export const Content = styled.div`
 
   @media (max-width: 768px) {
     padding: 40px 50px;
+  }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    padding: 40px 30px;
   }
 `;
 
@@ -40,6 +48,19 @@ export const PickDestination = styled.div`
 
     h2 {
       font-size: 20px;
+    }
+  }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    font-size: 16px;
+    justify-content: center;
+
+    h2 {
+      font-size: 16px;
+    }
+
+    p {
+      letter-spacing: 1px;
     }
   }
 `;

@@ -17,6 +17,25 @@ export const CrewImage = styled.aside`
       width: 450px;
     }
   }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    position: relative;
+    max-height: 300px;
+    top: 0;
+    left: 0;
+
+    .crew_img_mobile1 {
+      width: 250px;
+      max-height: 380px;
+      margin: 20px auto;
+      display: flex;
+      border-bottom: 2px solid #383b4b;
+    }
+
+    .crew_img1 {
+      display: none;
+    }
+  }
 `;
 
 export const CrewInfos = styled.div`
@@ -69,6 +88,32 @@ export const CrewInfos = styled.div`
       line-height: 28px;
       padding: 0px 80px;
       font-size: 16px;
+    }
+  }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5rem;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin: 20px 0;
+    }
+
+    p {
+      width: 100%;
+      line-height: 25px;
+      padding: 0px 40px;
+      font-size: 14px;
     }
   }
 `;

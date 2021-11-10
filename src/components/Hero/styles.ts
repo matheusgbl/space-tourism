@@ -6,6 +6,10 @@ export const Container = styled.section`
   @media (max-width: 768px) {
     padding: 5rem 10rem;
   }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    padding: 5rem 3.5rem;
+  }
 `;
 
 export const Content = styled.div`
@@ -50,6 +54,25 @@ export const Content = styled.div`
       max-width: 100%;
     }
   }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    text-align: center;
+
+    h1 {
+      margin: 40px 0;
+      font-size: 80px;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 16px;
+    }
+
+    p {
+      max-width: 100%;
+      line-height: 25px;
+    }
+  }
 `;
 
 export const ExploreBtn = styled.div`
@@ -85,6 +108,15 @@ export const ExploreBtn = styled.div`
       top: 600px;
       padding: 100px 55px;
       font-size: 28px;
+    }
+  }
+
+  @media (max-width: 768px) and (min-width: 375px) {
+    a {
+      right: 90px;
+      top: 580px;
+      padding: 80px 45px;
+      font-size: 24px;
     }
   }
 `;
